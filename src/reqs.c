@@ -304,6 +304,7 @@ establish_http_connection (struct conn_s *connptr, struct request_s *request)
  * These two defines are for the SSL tunnelling.
  */
 #define SSL_CONNECTION_RESPONSE "HTTP/1.0 200 Connection established"
+#define PROXY_AGENT "Proxy-agent: " PACKAGE "/" VERSION
 
 /*
  * Send the appropriate response to the client to establish a SSL
@@ -314,7 +315,7 @@ static int send_ssl_response (struct conn_s *connptr)
         return write_message (connptr->client_fd,
                               "%s\r\n"
                               "%s\r\n"
-                              "\r\n", SSL_CONNECTION_RESPONSE);
+                              "\r\n", SSL_CONNECTION_RESPONSE, PROXY_AGENT);
 }
 
 /*
