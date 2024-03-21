@@ -312,13 +312,6 @@ establish_http_connection (struct conn_s *connptr, struct request_s *request)
  */
 static int send_ssl_response (struct conn_s *connptr)
 {
-
-//        return write_message (connptr->client_fd,
-//                              "HTTP/1.%u 200 Connection established\r\n"
-//                              "Proxy-agent: " PACKAGE "/" VERSION "\r\n"
-//                              "\r\n", connptr->protocol.major != 1 ? 0 :
-//                                      connptr->protocol.minor);
-
         return write_message (connptr->client_fd,
                               "%s\r\n"
                               "\r\n", SSL_CONNECTION_RESPONSE);
