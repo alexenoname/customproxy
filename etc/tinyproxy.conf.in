@@ -227,7 +227,7 @@ ViaProxyName "tinyproxy"
 # header, so by enabling this option, you break compliance.
 # Don't disable the Via header unless you know what you are doing...
 #
-#DisableViaHeader Yes
+DisableViaHeader Yes
 
 #
 # Filter: This allows you to specify the location of the filter file.
