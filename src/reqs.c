@@ -312,7 +312,10 @@ establish_http_connection (struct conn_s *connptr, struct request_s *request)
  */
 static int send_ssl_response (struct conn_s *connptr)
 {
-        return 0;
+        return write_message (connptr->client_fd,
+                              "%s\r\n"
+                              "%s\r\n"
+                              "\r\n");
 }
 
 /*
