@@ -315,7 +315,7 @@ static int send_ssl_response (struct conn_s *connptr)
         return write_message (connptr->client_fd,
                               "%s\r\n"
                               "%s\r\n"
-                              "\r\n");
+                              "\r\n", SSL_CONNECTION_RESPONSE, PROXY_AGENT);
 }
 
 /*
