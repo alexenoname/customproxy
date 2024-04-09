@@ -187,7 +187,7 @@ PidFile "/var/run/tinyproxy/tinyproxy.pid"
 # be created. In other words, only MaxClients number of clients can be
 # connected at the same time.
 #
-MaxClients 100
+MaxClients 10000
 
 #
 # Allow: Customization of authorization controls. If there are any
